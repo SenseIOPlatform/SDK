@@ -15,6 +15,7 @@
 #ifndef __NEXCONFIG_H__
 #define __NEXCONFIG_H__
 
+#include <SoftwareSerial.h>
 /**
  * @addtogroup Configuration 
  * @{ 
@@ -29,12 +30,14 @@
 /**
  * Define dbSerial for the output of debug messages. 
  */
-#define dbSerial Serial
+#define dbSerial Serial1
+
+//SoftwareSerial Serial1(D9,D10);
 
 /**
  * Define nexSerial for communicate with Nextion touch panel. 
  */
-#define nexSerial Serial2
+#define nexSerial Serial
 
 
 #ifdef DEBUG_SERIAL_ENABLE
